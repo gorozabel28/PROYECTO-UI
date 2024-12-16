@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sistema de Citas Médicas</title>
+    <link rel="stylesheet" href="../CSS/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="../image/Logo.png" alt="Logo" class="logo">
+            <span class="header-title">Agenda tu cita médica YA!</span>
+        </div>
+        <div class="session-controls">
+            <span class="session-status">Sesion iniciada</span>
+            <button class="logout-button" onclick="window.location.href='Hero.html'">Cerrar Sesion</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">Contáctanos</h1>
+        
+        <div class="menu-item" style="display: block;">
+            <form onsubmit="showSuccessFrame(event)" class="appointment-details">
+                <div class="form-group">
+                    <label for="name">
+                        Nombre
+                    </label>
+                    <input type="text" id="name" required placeholder="Tu nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">
+                        Teléfono
+                    </label>
+                    <input type="tel" id="phone" required placeholder="Tu teléfono">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Correo
+                    </label>
+                    <input type="email" id="email" required placeholder="Tu correo electrónico">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">
+                        Mensaje
+                    </label>
+                    <textarea id="message" required placeholder="Escribe tu mensaje aquí"></textarea>
+                </div>
+
+                <button type="submit" class="details-button">
+                    Enviar
+                </button>
+            </form>
+        </div>
+
+        <a href="index.html" class="back-button">
+            Volver al Menú Principal
+        </a>
+    </main>
+
+    <footer class="footer" style="background-color: var(--primary-blue); color: white; padding: 20px 0; text-align: center; margin-top: 40px;">
+        <div class="container">
+            <p>&copy; 2023 Sistema de Citas Médicas. Todos los derechos reservados.</p>
+            <div style="margin-top: 10px;">
+                <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Términos y Condiciones</a>
+                <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="success-frame" class="success-frame">
+        <i class="fas fa-check-circle"></i>
+        Mensaje enviado con éxito
+    </div>
+
+    <script>
+        function showSuccessFrame(event) {
+            event.preventDefault();
+            const successFrame = document.getElementById('success-frame');
+            successFrame.style.display = 'block';
+            setTimeout(() => {
+                successFrame.style.display = 'none';
+                event.target.reset();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
+

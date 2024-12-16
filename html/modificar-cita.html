@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Cita - Sistema de Citas Médicas</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="../image/Logo.png" alt="Logo" class="logo">
+            <span class="header-title">Agenda tu cita médica YA!</span>
+        </div>
+        <div class="session-controls">
+            <span class="session-status">Sesion iniciada</span>
+            <button class="logout-button" onclick="window.location.href='Hero.html'">Cerrar Sesion</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">Modificar Cita</h1>
+        
+        <div class="menu-item" style="display: block; margin-bottom: 20px; background-color: white; padding: 20px;">
+            <div class="appointment-details" style="padding: 20px;">
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <i class="fas fa-calendar-day" style="margin-right: 15px;"></i>
+                    <div>
+                        <div style="font-weight: 500;">Fecha y Hora</div>
+                        <input type="datetime-local" value="2024-11-15T10:30" style="margin-top: 5px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <i class="fas fa-user-md" style="margin-right: 15px;"></i>
+                    <div>
+                        <div style="font-weight: 500;">Doctor</div>
+                        <select style="margin-top: 5px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                            <option value="dr-garcia" selected>Dr. Garcia</option>
+                            <option value="dra-rodriguez">Dra. Rodriguez</option>
+                            <option value="dr-martinez">Dr. Martinez</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <i class="fa fa-address-book" style="margin-right: 15px;"></i>
+                    <div>
+                        <div style="font-weight: 500;">Especialidad</div>
+                        <select style="margin-top: 5px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                            <option value="cardiologia" selected>Cardiología</option>
+                            <option value="ginecologia">Ginecología</option>
+                            <option value="medicina-general">Medicina General</option>
+                            <option value="traumatologia">Traumatología</option>
+                            <option value="oftalmologia">Oftalmología</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <i class="fas fa-map-marker-alt" style="margin-right: 15px;"></i>
+                    <div>
+                        <div style="font-weight: 500;">Ubicación</div>
+                        <input type="text" value="Consultorio 305, Edificio Principal" style="margin-top: 5px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <i class="fas fa-comment-medical" style="margin-right: 15px;"></i>
+                    <div>
+                        <div style="font-weight: 500;">Motivo de la consulta</div>
+                        <textarea style="margin-top: 5px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; width: 100%;">Chequeo anual</textarea>
+                    </div>
+                </div>
+
+                 <!-- Success Frame -->
+                <div id="success-frame" style="display: none; background-color: #4CAF50; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+                    <i class="fas fa-check-circle" style="font-size: 24px; margin-right: 10px;"></i>
+                    <span>¡Cita modificada con éxito!</span>
+                </div>
+
+                <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                    <button class="details-button" style="flex: 1; display: flex; align-items: center; justify-content: center;" onclick="showSuccessFrame()">
+                        Guardar Cambios
+                    </button>
+                </div>
+
+                <a href="detalles-cita.html" class="details-button" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                    Volver a Detalles de la Cita
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showSuccessFrame() {
+            const successFrame = document.getElementById('success-frame');
+            successFrame.style.display = 'block';
+            setTimeout(() => {
+                successFrame.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+<footer class="footer" style="background-color: var(--primary-blue); color: white; padding: 20px 0; text-align: center; margin-top: 40px;">
+    <div class="container">
+        <p>&copy; 2023 Sistema de Citas Médicas. Todos los derechos reservados.</p>
+        <div style="margin-top: 10px;">
+            <a href="terminos-condicionesindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Términos y Condiciones</a>
+            <a href="contactoindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Contacto</a>
+            <a href="politica-privacidadindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Política de Privacidad</a>
+        </div>
+    </div>
+</footer>
+</html>
+

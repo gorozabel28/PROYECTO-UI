@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Citas Médicas</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="../image/Logo.png" alt="Logo" class="logo">
+            <span class="header-title">Agenda tu cita médica YA!</span>
+        </div>
+        <div class="session-controls">
+            <span class="session-status">Sesion iniciada</span>
+            <button class="logout-button" onclick="window.location.href='Hero.html'">Cerrar Sesion</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">Menu Principal</h1>
+        
+        <div class="menu-grid">
+            <a href="nuestros-medicos.html" class="menu-item">
+                <i class="fas fa-user-md"></i>
+                <span>Nuestros Medicos</span>
+            </a>
+            
+            <a href="horarios-disponibles.html" class="menu-item">
+                <i class="fas fa-clock"></i>
+                <span>Horarios Disponibles</span>
+            </a>
+            
+            <a href="notificaciones.html" class="menu-item">
+                <i class="fas fa-bell"></i>
+                <span>Notificaciones</span>
+            </a>
+            
+            <a href="ayuda.html" class="menu-item">
+                <i class="fas fa-question-circle"></i>
+                <span>Ayuda</span>
+            </a>
+            
+            <a href="historial-citas.html" class="menu-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Historial de Citas</span>
+            </a>
+            
+            <a href="crear-cita.html" class="menu-item">
+                <i class="fas fa-plus-circle"></i>
+                <span>Crear Cita</span>
+            </a>
+        </div>
+
+        <div class="next-appointment">
+            <h2>Proxima Cita</h2>
+            <div class="appointment-details">
+                <p><strong>Fecha:</strong> 15 de Noviembre, 2024</p>
+                <p><strong>Hora:</strong> 10:30 AM</p>
+                <p><strong>Doctor:</strong> Dr. Garcia</p>
+                <a href="detalles-cita.html" class="details-button">Ver Detalles</a>
+            </div>
+        </div>
+    </main>
+</body>
+<footer class="footer" style="background-color: var(--primary-blue); color: white; padding: 20px 0; text-align: center; margin-top: 40px;">
+    <div class="container">
+        <p>&copy; 2023 Sistema de Citas Médicas. Todos los derechos reservados.</p>
+        <div style="margin-top: 10px;">
+            <a href="terminos-condicionesindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Términos y Condiciones</a>
+            <a href="contactoindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Contacto</a>
+            <a href="politica-privacidadindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Política de Privacidad</a>
+        </div>
+    </div>
+</footer>
+
+</html>
+

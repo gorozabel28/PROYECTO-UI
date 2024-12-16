@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cita - Sistema de Citas Médicas</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="../image/Logo.png" alt="Logo" class="logo">
+            <span class="header-title">Agenda tu cita médica YA!</span>
+        </div>
+        <div class="session-controls">
+            <span class="session-status">Sesion iniciada</span>
+            <button class="logout-button" onclick="window.location.href='Hero.html'">Cerrar Sesion</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">Crear Nueva Cita</h1>
+        
+        <div class="menu-item" style="display: block; margin-bottom: 20px;">
+            <div class="appointment-details" style="padding: 20px;">
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">
+                        <i class="fas fa-stethoscope" style="margin-right: 8px;"></i>
+                        Especialidad:
+                    </label>
+                    <select style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                        <option value="">Seleccione una especialidad</option>
+                        <option value="cardiologia">Cardiología</option>
+                        <option value="ginecologia">Ginecología</option>
+                        <option value="medicina-general">Medicina General</option>
+                        <option value="traumatologia">Traumatología</option>
+                        <option value="oftalmologia">Oftalmología</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">
+                        <i class="fas fa-user-md" style="margin-right: 8px;"></i>
+                        Doctor:
+                    </label>
+                    <select style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                        <option value="">Seleccione un doctor</option>
+                        <option value="dr-garcia">Dr. García - Cardiología</option>
+                        <option value="dra-rodriguez">Dra. Rodríguez - Medicina General</option>
+                        <option value="dr-martinez">Dr. Martínez - Oftalmología</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">
+                        <i class="fas fa-calendar" style="margin-right: 8px;"></i>
+                        Fecha:
+                    </label>
+                    <input type="date" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">
+                        <i class="fas fa-clock" style="margin-right: 8px;"></i>
+                        Hora:
+                    </label>
+                    <input type="time" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">
+                        <i class="fas fa-comment-medical" style="margin-right: 8px;"></i>
+                        Motivo de la consulta:
+                    </label>
+                    <textarea style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #c4c4c4; min-height: 100px; resize: vertical;"></textarea>
+                </div>
+
+                <!-- Success Frame -->
+                <div id="success-frame" style="display: none; background-color: #4CAF50; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+                    <i class="fas fa-check-circle" style="font-size: 24px; margin-right: 10px;"></i>
+                    <span>¡Cita creada con éxito!</span>
+                </div>
+
+                <div style="display: flex; gap: 10px; margin-top: 5px;">
+                    <button onclick="showSuccessFrame()" class="details-button" style="flex: 1; background-color: #4CAF50;">
+                        Agendar Cita
+                    </button>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 5px;">
+                    <a href="index.html" class="details-button" style="flex: 1; text-align: center;">
+                        Volver al Menú Principal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function showSuccessFrame() {
+            document.getElementById('success-frame').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('success-frame').style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+<footer class="footer" style="background-color: var(--primary-blue); color: white; padding: 20px 0; text-align: center; margin-top: 40px;">
+    <div class="container">
+        <p>&copy; 2023 Sistema de Citas Médicas. Todos los derechos reservados.</p>
+        <div style="margin-top: 10px;">
+            <a href="terminos-condicionesindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Términos y Condiciones</a>
+            <a href="contactoindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Contacto</a>
+            <a href="politica-privacidadindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Política de Privacidad</a>
+        </div>
+    </div>
+</footer>
+</html>
+

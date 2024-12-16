@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Citas - Sistema de Citas Médicas</title>
+    <link rel="stylesheet" href="../CSS/historial-citas-vacio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="../image/Logo.png" alt="Logo" class="logo">
+            <span class="header-title">Agenda tu cita médica YA!</span>
+        </div>
+        <div class="session-controls">
+            <span class="session-status">Sesion iniciada</span>
+            <button class="logout-button" onclick="window.location.href='Hero.html'">Cerrar Sesion</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">Historial de Citas</h1>
+        
+        <div class="empty-state">
+            <div class="empty-state">
+                <img src="../image/blanco.png">
+            </div>
+            <h2 class="empty-state-title">Todavía no tienes citas agendadas</h2>
+            <h2 class="empty-state-title">Crea una AHORA!</h2>
+            <a href="crear-cita.html" class="details-button">
+                Crear cita
+            </a>
+            <div>
+                <a href="index.html" class="details-button">
+                    Volver al Menú Principal
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="background-color: var(--primary-blue); color: white; padding: 20px 0; text-align: center; margin-top: 40px;">
+        <div class="container">
+            <p>&copy; 2023 Sistema de Citas Médicas. Todos los derechos reservados.</p>
+            <div style="margin-top: 10px;">
+                <a href="terminos-condicionesindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Términos y Condiciones</a>
+                <a href="contactoindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Contacto</a>
+                <a href="politica-privacidadindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

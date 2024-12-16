@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Cita - Sistema de Citas Médicas</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="../image/Logo.png" alt="Logo" class="logo">
+            <span class="header-title">Agenda tu cita médica YA!</span>
+        </div>
+        <div class="session-controls">
+            <span class="session-status">Sesion iniciada</span>
+            <button class="logout-button" onclick="window.location.href='Hero.html'">Cerrar Sesion</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">Detalles de la Cita</h1>
+        
+        <div class="menu-item" style="display: block; margin-bottom: 20px;">
+            <div class="appointment-details" style="padding: 20px;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <i class="fas fa-calendar-day" style="margin-right: 15px;"></i>
+                    <div>
+                        <strong style="display: block; font-size: 18px;">Fecha y Hora</strong>
+                        <span>15 de Noviembre, 2024 - 10:30 AM</span>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <i class="fas fa-user-md" style="margin-right: 15px;"></i>
+                    <div>
+                        <strong style="display: block; font-size: 18px;">Doctor</strong>
+                        <span>Dr. Garcia</span>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <i class="fas fa-heart" style="margin-right: 15px;"></i>
+                    <div>
+                        <strong style="display: block; font-size: 18px;">Especialidad</strong>
+                        <span>Cardiología</span>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <i class="fas fa-map-marker-alt" style="margin-right: 15px;"></i>
+                    <div>
+                        <strong style="display: block; font-size: 18px;">Ubicación</strong>
+                        <span>Consultorio 305, Edificio Principal</span>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <i class="fas fa-comment-medical" style="margin-right: 15px;"></i>
+                    <div>
+                        <strong style="display: block; font-size: 18px;">Motivo de la consulta</strong>
+                        <span>Chequeo anual</span>
+                    </div>
+                </div>
+
+                <!-- Success Frame -->
+                <div id="success-frame" style="display: none; background-color: #4CAF50; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+                    <i class="fas fa-check-circle" style="font-size: 24px; margin-right: 10px;"></i>
+                    <span>¡Cita creada con éxito!</span>
+                </div>
+                
+                <div id="cancel-frame" style="display: none; background-color: #ef4444; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+                    <i class="fas fa-check-circle" style="font-size: 24px; margin-right: 10px;"></i>
+                    <span>Cita cancelada</span>
+                </div>
+
+                <div style="display: flex; gap: 10px; margin-top: 10px; text-align: center;">  
+                    <a href="modificar-cita.html" class="details-button" style="flex: 1;">Modificar Cita</a>
+                    <button class="details-button" style="flex: 1; background-color: #ef4444;" onclick="showCancelFrame()">
+                        Cancelar Cita
+                    </button>
+                </div>
+
+                
+                <a href="index.html" class="back-button" style="display: block; text-align: center; margin-top: 10px;">
+                    Volver al Menú Principal
+                </a>
+            </div>
+        </div>
+    </main>
+    <script>
+        function showCancelFrame() {
+            const cancelFrame = document.getElementById('cancel-frame');
+            cancelFrame.style.display = 'block';
+            setTimeout(() => { 
+                cancelFrame.style.display = 'none';
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+    </script>
+</body>
+<footer class="footer" style="background-color: var(--primary-blue); color: white; padding: 20px 0; text-align: center; margin-top: 40px;">
+    <div class="container">
+        <p>&copy; 2023 Sistema de Citas Médicas. Todos los derechos reservados.</p>
+        <div style="margin-top: 10px;">
+            <a href="terminos-condicionesindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Términos y Condiciones</a>
+            <a href="contactoindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Contacto</a>
+            <a href="politica-privacidadindex.html" style="color: white; margin: 0 10px; text-decoration: none;">Política de Privacidad</a>
+        </div>
+    </div>
+</footer>
+</html>
+
